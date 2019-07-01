@@ -1,4 +1,4 @@
-{% extends 'jobs/base.html' %} <!-- use the layout of base.html -->
+{% extends 'blog/base.html' %} <!-- use the layout of base.html -->
 
 {% block title %} Home {% endblock %} <!-- Block title -->
 
@@ -12,16 +12,22 @@
   <h2>Latest Posts</h2>
   <hr />
   {% for blog in blogs.all %}
-  <a href="{% url 'detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
+  <h3>{{ blog.title }}</h3></a>
   {{ pub_date_pretty}}
   <br />
   <img class="img-fluid" src="{{ blog.image.url }}" height=200 width=200 />
   <br />
-  <p>{{ blog.summary }}</p>
+    <a href="{% url 'detail' blog.id %}"><h3> Read more </h3></a>
+    <hr />
   {% endfor %}
   </div>
 </main>
 
+  <footer class="text-muted">
+    <div class="container text-center">
+      <p>© NIZZOLI Laurent {% now "Y" %}</p>
+      </div>
+  </footer>
 
 
 {% endblock %} <!-- End of block content from base.html -->

@@ -1,54 +1,27 @@
+
 {% extends 'jobs/base.html' %} <!-- use the layout of base.html -->
 
 {% block title %} Home {% endblock %} <!-- Block title -->
 
 {% block content %} <!-- Block content from base.html -->
 
+  {% load staticfiles %}
 
+<section id="about" class="container-fluid">
 
- <section id="about" class="container-fluid">
-
-     <div class="heading  ">
-         <h1 class="jumbotron-heading">Laurent NIZZOLI, web developer</h1>
-   <p class="lead text-muted">Looking for a company in Strasbourg to do the bachelor's degree "Analyst in Computer and Network Engineering - cybersecurity specialist".
-I am a software developer that has always been fascinated with computers. After learning CSS and HTML, I got involved in a mini-application in PHP PDO as a project during my internship. I integrated it in my internship structure during which I learned to code in the Java language.
+        <div class="heading">
+                <h1>NIZZOLI Laurent</h1>
+                <p class="presentation col-8 ">  Looking for a company in Strasbourg to do the bachelor's degree "Analyst in Computer and Network Engineering - cybersecurity specialist".
+I am a software developer that has always been fascinated with computers.  After learning CSS and HTML, I got involved in a mini-application in PHP PDO as a project during my internship.  I integrated it in my internship structure during which I learned to code in the Java language.
 I work as an autodidact every night to acquire additional technical skills. Currently I'm learning Python and its Django Framework</p>
-      <p>
-        try
-      </p>
-     </div>
-    </section>
+            <a href="{% static 'CV_NIZZOLI_Laurent.pdf' %}" class="button1" target="_blank">Download CV</a>
+           <!--  <img src="{% static 'nick.jpg' %}" height="300" /> -->
+
+        </div>
+</section>
 
 
-    <section id="experience">
-            <div class="container">
-                <div class="white-divider"></div>
-                <div class="heading">
-                    <h2>Professionnal experiences</h2>
-                </div>
-                 {% for job in jobs.all %}
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-badge"><span class="fas fa-briefcase"></span></div>
-                        <div class="timeline-panel-container">
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3>Skwalsoft</h3>
-                                    <h4>Trainee developer Java on Android & Web developer</h4>
-                                    <img class="card-img-top" src="{{ job.image.url }}">
-                                </div>
-                                <div class="timeline-body">
-
-                                    <p> {{ job.summary }}</p>
-                                </div>
-                            </div>
-                        </div>
-                </ul>
-                {% endfor %}
-            </div>
-        </section>
-
-           <section id="skills">
+<section id="skills">
             <div class="red-divider"></div>
             <div class="heading">
                 <h2>Skills</h2>
@@ -100,8 +73,37 @@ I work as an autodidact every night to acquire additional technical skills. Curr
                     </div>
                 </div>
             </div>
-        </section>
-<hr>
+</section>
+
+
+  <section id="experience">
+            <div class="container">
+                <div class="white-divider"></div>
+                <div class="heading">
+                    <h2>Professionnal experiences</h2>
+                </div>
+                <div class="row">
+          {% for job in jobs.all %}
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+                <p class="card-text+top text-center">{{ job.company }}</p>
+                <p class="card-text+top text-center">{{ job.title }}</p>
+                <p class="card-text+top text-center">{{ job.date_to_date }}</p>
+              <img class="card-img-top" src="{{ job.image.url }}" />
+
+              <div class="card-body">
+                  <a href="{% url 'detailjobs' job.id %}"><h3> Read more </h3></a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+                </div>
+            </div>
+  </section>
+
+
+
+
 <section id="education">
             <div class="container">
                  <div class="red-divider"></div>

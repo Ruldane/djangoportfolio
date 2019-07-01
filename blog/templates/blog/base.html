@@ -7,8 +7,6 @@
 
     <meta charset="UTF-8">
     <title>{% block title%} {% endblock %}</title>
-    {% include 'jobs/navabar.html' %} <!-- insert navbar.html here, will be extend on all the page -->
-
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}"> <!-- link boostrap -->
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/js/bootstrap.min.js' %}">
@@ -22,13 +20,17 @@
 <body>
 
 
+
+{% include 'blog/navabar.html' %} <!-- insert navbar.html here, will be extend on all the page -->
 {% block content %} {% endblock %} <!-- to insert element in the body of the other pages -->
 
-</body>
+  <footer class="text-muted">
+    <div class="container text-center">
+      <p>© Laurent NIZZOLI {% now "Y" %}</p>
 
-<footer class="text-muted">
-  <div class="container text-center">
-    <p> CopyRight Laurent NIZZOLI {% now "Y" %} </p>
-  </div>
-</footer>
+
+      </div>
+  </footer>
+
+</body>
 </html>

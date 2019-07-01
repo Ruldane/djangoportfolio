@@ -1,88 +1,218 @@
-<!doctype html>
- {% load staticfiles %}
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
-    <title>Album example · Bootstrap</title>
+{% extends 'jobs/base.html' %} <!-- use the layout of base.html -->
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% block title %} Home {% endblock %} <!-- Block title -->
 
-    <!-- Bootstrap core CSS -->
-<link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% block content %} <!-- Block content from base.html -->
 
 
-    <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand active" href="{% url 'home' %}">NIZZOLI Laurent</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link" href="https://www.linkedin.com/in/laurent-nizzoli-7b1296180/">Linkedin</a>
-        <a class="nav-item nav-link" href="https://github.com/ruldane">Github</a>
-        <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
-    </div>
-  </div>
-</nav>
-</header>
 
-<main role="main">
+ <section id="about" class="container-fluid">
 
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1 class="jumbotron-heading">Laurent NIZZOLI, software develper</h1>
-      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+     <div class="heading  ">
+         <h1 class="jumbotron-heading">Laurent NIZZOLI, web developer</h1>
+   <p class="lead text-muted">Looking for a company in Strasbourg to do the bachelor's degree "Analyst in Computer and Network Engineering - cybersecurity specialist".
+I am a software developer that has always been fascinated with computers. After learning CSS and HTML, I got involved in a mini-application in PHP PDO as a project during my internship. I integrated it in my internship structure during which I learned to code in the Java language.
+I work as an autodidact every night to acquire additional technical skills. Currently I'm learning Python and its Django Framework</p>
       <p>
-        <a href="{% static 'CV_NIZZOLI_Laurent.pdf' %}" class="btn btn-primary my-2">Download my CV </a>
+        try
       </p>
-    </div>
-  </section>
+     </div>
+    </section>
 
-  <div class="album py-5 bg-light">
-    <div class="container">
 
-      <div class="row">
+    <section id="experience">
+            <div class="container">
+                <div class="white-divider"></div>
+                <div class="heading">
+                    <h2>Professionnal experiences</h2>
+                </div>
+                 {% for job in jobs.all %}
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-badge"><span class="fas fa-briefcase"></span></div>
+                        <div class="timeline-panel-container">
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>Skwalsoft</h3>
+                                    <h4>Trainee developer Java on Android & Web developer</h4>
+                                    <img class="card-img-top" src="{{ job.image.url }}">
+                                </div>
+                                <div class="timeline-body">
 
-          {% for job in jobs.all %}
-
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="{{ job.image.url }}">
-            <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>
+                                    <p> {{ job.summary }}</p>
+                                </div>
+                            </div>
+                        </div>
+                </ul>
+                {% endfor %}
             </div>
-          </div>
-        </div>
+        </section>
 
-          {% endfor %}
+           <section id="skills">
+            <div class="red-divider"></div>
+            <div class="heading">
+                <h2>Skills</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6">
+                        <h2> Web : </h2>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                <h5>DJANGO 60%</h5>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                                <h5>HTML & CSS 85%</h5>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                <h5>BOOTSTRAP 80%</h5>
+                            </div>
+                        </div>
+                             <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                <h5>JAVASCRIPT 50%</h5>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h2> Programming : </h2>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                <h5>PYTHON 50%</h5>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                <h5>JAVA 60%</h5>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                                <h5>GROOVY 20%</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<hr>
+<section id="education">
+            <div class="container">
+                 <div class="red-divider"></div>
+                <div class="heading">
+                    <h2>Formations</h2>
+                </div>
+                <div class="row">
+
+                     <div class="col-md-6">
+                         <div class="education-block">
+                             <h5>2018 - 2019</h5>
+                            <span class="fas fa-graduation-cap"></span>
+                            <h3>Aristée - La Garde</h3>
+                            <h4>Software developer </h4>
+                            <div class="blue-divider"></div>
+                            <p>Formation center</p>
+                            <p>Basics of programming</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="education-block">
+                            <h5>2019</h5>
+                            <span class="fas fa-graduation-cap"></span>
+                            <h3>Platform Udemy</h3>
+                            <h4>Several formations</h4>
+                            <div class="blue-divider"></div>
+                            <p>Python programming oriented object, Django, Pandas, Bootsrap, PHP PDO, Java programming oriented object, Testing application, Framework Spring & Groovy</p>
+                            <p>Responsive, POO, PDO, Testing & Framework</p>
+                        </div>
+                    </div>
+
+                        <div class="col-md-6">
+                         <div class="education-block">
+                            <h5>2011</h5>
+                            <span class="fas fa-graduation-cap"></span>
+                            <h3>Défi83 - Toulon </h3>
+                            <h4>Payroll accountant</h4>
+                            <div class="blue-divider"></div>
+                            <p>Formation center</p>
+                            <p>Learning the paid for company</p>
+
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="education-block">
+                            <h5>2008 - 2011</h5>
+                            <span class="fas fa-graduation-cap"></span>
+                            <h3>Hermès Formation - Toulon </h3>
+                            <h4>Higher Technician Certificate Management Assistant PME-PMI</h4>
+                            <div class="blue-divider"></div>
+                            <p>Gestion of small companies (Administrative in majority)</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+       <section id="recommandations">
+            <div class="container">
+                <div class="red-divider"></div>
+                <div class="heading">
+                    <h2>Skills i will learn</h2>
+                </div>
+                <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                         <li data-target="#myCarousel" data-slide-to="1"></li>
+                         <li data-target="#myCarousel" data-slide-to="2"></li>
+                         <li data-target="#myCarousel" data-slide-to="3"></li>
+                         <li data-target="#myCarousel" data-slide-to="4"></li>
+                         <li data-target="#myCarousel" data-slide-to="5"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <h3>"Groovy"</h3>
+                            <h4>Create Groovy Applications from scratch</h4>
+                        </div>
+                           <div class="carousel-item ">
+                            <h3>"Build a blog"</h3>
+                            <h4>Share informations about programming</h4>
+                        </div>
+
+                          <div class="carousel-item">
+                            <h3>"Spring Framework 5"</h3>
+                            <h4>Spring Core, AOP, MVC, Hibernate CRUD & Maven</h4>
+                        </div>
+                          <div class="carousel-item">
+                            <h3>"Docker & Kubernetes"</h3>
+                            <h4>Docker from scratch, Automatically deploy to Github</h4>
+                        </div>
+                          <div class="carousel-item">
+                            <h3>"Python & Framework"</h3>
+                            <h4>Improve skills on Python, Django  </h4>
+                        </div>
+                          <div class="carousel-item">
+                            <h3>"Deep Learning"</h3>
+                            <h4>Artificial Neural Networks, Convolutional Neural Networks & Recurrent Neural Networks</h4>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev" role="button">
+                        <span class="fas fa-chevron-left fa-2x"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" data-slide="next" role="button">
+                        <span class="fas fa-chevron-right fa-2x"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
 
-      </div>
-    </div>
-  </div>
-
-</main>
-
-<footer class="text-muted">
-  <div class="container text-center">
-    <p> CopyRight Laurent NIZZOLI {% now "Y" %} </p>
-  </div>
-</footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-  </body>
-</html>
+{% endblock %} <!-- End of block content from base.html -->

@@ -41,16 +41,23 @@ I work as an autodidact every night to acquire additional technical skills. Curr
                                 <h5>HTML & CSS 85%</h5>
                             </div>
                         </div>
+
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
                                 <h5>BOOTSTRAP 80%</h5>
                             </div>
                         </div>
-                             <div class="progress">
+                        <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
                                 <h5>JAVASCRIPT 50%</h5>
                             </div>
                         </div>
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                                <h5>PHP 50%</h5>
+                            </div>
+                        </div>
+
 
                     </div>
                     <div class="col-md-6">
@@ -76,7 +83,7 @@ I work as an autodidact every night to acquire additional technical skills. Curr
 </section>
 
 
-  <section id="experience">
+  <section id="experience" >
             <div class="container">
                 <div class="white-divider"></div>
                 <div class="heading">
@@ -86,13 +93,14 @@ I work as an autodidact every night to acquire additional technical skills. Curr
           {% for job in jobs.all %}
           <div class="col-md-4">
             <div class="card mb-4 box-shadow">
-                <p class="card-text+top text-center">{{ job.company }}</p>
-                <p class="card-text+top text-center">{{ job.title }}</p>
+                <h4 class="card-text+top text-center">{{ job.company }}</h4>
+                <h5 class="card-text+top text-center">{{ job.title }}</h5>
                 <p class="card-text+top text-center">{{ job.date_to_date }}</p>
               <img class="card-img-top" src="{{ job.image.url }}" />
 
-              <div class="card-body">
-                  <a href="{% url 'detailjobs' job.id %}"><h3> Read more </h3></a>
+              <div class="card-body text-center" >
+                 <a href="{% url 'detailjobs' job.id %}"> <button type="button" class="btn btn-primary">Read more</button></a>
+
               </div>
             </div>
           </div>
@@ -101,10 +109,7 @@ I work as an autodidact every night to acquire additional technical skills. Curr
             </div>
   </section>
 
-
-
-
-<section id="education">
+ <section id="education">
             <div class="container">
                  <div class="red-divider"></div>
                 <div class="heading">
@@ -113,15 +118,15 @@ I work as an autodidact every night to acquire additional technical skills. Curr
                 <div class="row">
 
                      <div class="col-md-6">
-                         <div class="education-block">
+                         <div class="education-block">w
                              <h5>2018 - 2019</h5>
                             <span class="fas fa-graduation-cap"></span>
                             <h3>Aristée - La Garde</h3>
                             <h4>Software developer </h4>
-                            <div class="blue-divider"></div>
-                            <p>Formation center</p>
-                            <p>Basics of programming</p>
-                        </div>
+                            <div class="red-divider"></div>
+                             <p class="show-more"> <span>  Using HTML & CSS <br>Procedural development & using forms with database with PHP <br> Basics programming OOP with Python <br> Using Virtual Box <br> Development of an OOP application with PHP </span> </p>
+                            <button class="read-more btn btn-info" >Read More</button>
+                         </div>
                     </div>
 
                     <div class="col-md-6">
@@ -130,9 +135,10 @@ I work as an autodidact every night to acquire additional technical skills. Curr
                             <span class="fas fa-graduation-cap"></span>
                             <h3>Platform Udemy</h3>
                             <h4>Several formations</h4>
-                            <div class="blue-divider"></div>
-                            <p>Python programming oriented object, Django, Pandas, Bootsrap, PHP PDO, Java programming oriented object, Testing application, Framework Spring & Groovy</p>
-                            <p>Responsive, POO, PDO, Testing & Framework</p>
+                            <div class="red-divider"></div>
+                            <p class="show-more"> <span> Python programming oriented object, Django, Pandas <br> Bootsrap, PHP PDO, <br>Java programming oriented object, Testing application <br> Framework Spring & Groovy </span></p>
+                             <button class="read-more btn btn-info">Read More</button>
+
                         </div>
                     </div>
 
@@ -142,9 +148,9 @@ I work as an autodidact every night to acquire additional technical skills. Curr
                             <span class="fas fa-graduation-cap"></span>
                             <h3>Défi83 - Toulon </h3>
                             <h4>Payroll accountant</h4>
-                            <div class="blue-divider"></div>
-                            <p>Formation center</p>
-                            <p>Learning the paid for company</p>
+                            <div class="red-divider"></div>
+                             <p class="show-more"> <span> Formation center <br> earning the paid for company </span> </p>
+                             <button class="read-more btn btn-info">Read More</button>
 
                         </div>
                     </div>
@@ -152,15 +158,17 @@ I work as an autodidact every night to acquire additional technical skills. Curr
                         <div class="education-block">
                             <h5>2008 - 2011</h5>
                             <span class="fas fa-graduation-cap"></span>
-                            <h3>Hermès Formation - Toulon </h3>
-                            <h4>Higher Technician Certificate Management Assistant PME-PMI</h4>
-                            <div class="blue-divider"></div>
-                            <p>Gestion of small companies (Administrative in majority)</p>
+                            <h3>Hermès- Toulon </h3>
+                            <h4>Higher TCM Assistant of SMEs</h4>
+                            <div class="red-divider"></div>
+                            <p class="show-more"> <span> Higher Technician Certificate Management Assistant of SMEs <br> Gestion of small companies (Administrative in majority) </span> </p>
+                            <button class="read-more btn btn-info">Read More</button>
 
                         </div>
                     </div>
                 </div>
             </div>
+
         </section>
 
         <hr>
@@ -185,8 +193,8 @@ I work as an autodidact every night to acquire additional technical skills. Curr
                             <h4>Create Groovy Applications from scratch</h4>
                         </div>
                            <div class="carousel-item ">
-                            <h3>"Build a blog"</h3>
-                            <h4>Share informations about programming</h4>
+                            <h3>"Learning Web development"</h3>
+                            <h4>Jquery, Node.js, Express.js, APIs & Web Design</h4>
                         </div>
 
                           <div class="carousel-item">
@@ -199,7 +207,7 @@ I work as an autodidact every night to acquire additional technical skills. Curr
                         </div>
                           <div class="carousel-item">
                             <h3>"Python & Framework"</h3>
-                            <h4>Improve skills on Python, Django  </h4>
+                            <h4>Improve skills on Python & Django  </h4>
                         </div>
                           <div class="carousel-item">
                             <h3>"Deep Learning"</h3>
@@ -215,6 +223,10 @@ I work as an autodidact every night to acquire additional technical skills. Curr
                 </div>
             </div>
         </section>
-
+{% endblock %}
+{% block footer %}
+            <a href="#about">
+                <span class="fas fa-chevron-up"></span>
+            </a>
 
 {% endblock %} <!-- End of block content from base.html -->

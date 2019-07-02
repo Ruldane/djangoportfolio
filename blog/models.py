@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from django.utils.html import format_html_join
+from django.utils.safestring import mark_safe
 
 
 class Blog(models.Model):
@@ -14,5 +16,9 @@ class Blog(models.Model):
     def summary(self):
         return self.body[:100]
 
-    def pub_date_pretty(self):
-        return self.pub_date.strftime('%b %e %Y')
+
+
+
+
+
+

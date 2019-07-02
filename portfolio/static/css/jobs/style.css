@@ -1,3 +1,15 @@
+.show-more span {
+  display: inline-block;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 2s;
+  opacity: 0;
+}
+.show-more span.fade-in {
+  height: auto;
+  opacity: 1;
+}
+
 /* GENERAL */
 body{
     font-family: 'Lato', sans-serif;
@@ -111,9 +123,11 @@ font-size: 20px;
     background: #fff;
 }
 
-#skills .heading h2 {
+
+#skills h2 {
     color: #1E90FF;
 }
+
 #skills .progress{
     height: auto;
     margin: 30px 20px;
@@ -131,6 +145,10 @@ font-size: 20px;
 /* EXPERIENCE */
 #experience{
     background: #1E90FF;
+    font-family: 'Lato', sans-serif;
+}
+#experience p{
+    color: #1E90FF;
 }
 #experience .heading h2{
     color: #fff;
@@ -245,9 +263,7 @@ font-size: 20px;
     font-size: 15px;
     margin-bottom: 15px;
 }
-.education-block .fas{
-    font-size: 35px;
-}
+
 .education-block h3{
      color: #1E90FF;
 }
@@ -286,15 +302,12 @@ font-size: 20px;
 
 /* RECOMMANDATIONS */
 #recommandations{
-    background: #fff;
+    background: #1E90FF;
 }
 #recommandations .heading h2{
-    color: #1E90FF
+    color: #fff;
 }
-.fas.fa-chevron-left, .fas.fa-chevron-right{
-    background-image: none;
-    color: #1E90FF;
-}
+
 .carousel-indicators{
     bottom: 0px;
 }
@@ -302,7 +315,7 @@ font-size: 20px;
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    border: 1px solid #1E90FF;
+    border: 1px solid #fff;
 }
 .carousel-indicators li.active{
     background-color: #1E90FF;
@@ -311,8 +324,13 @@ font-size: 20px;
     padding: 40px 30px;
 }
 #myCarousel .carousel-item h3{
-    color: #1E90FF;
+    color: #fff;
     font-style: italic;
+}
+
+.fas.fa-chevron-left, .fas.fa-chevron-right{
+    background-image: none;
+    color: #1E90FF;
 }
 
 
@@ -320,17 +338,4 @@ font-size: 20px;
 footer{
     background: #333;
     padding: 20px 0 40px;
-}
-footer .fas{
-    font-size:  25px;
-    margin: 20px;
-    color: #1E90FF;
-    height: 30px;
-}
-footer .fas:hover{
-    font-size:  27px;
-}
-footer h5{
-    color: #fff;
-    font-weight: normal;
 }

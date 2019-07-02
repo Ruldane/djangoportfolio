@@ -1,6 +1,6 @@
 {% extends 'blog/base.html' %} <!-- use the layout of base.html -->
 
-{% block title %} Home {% endblock %} <!-- Block title -->
+{% block title %} Blog {% endblock %} <!-- Block title -->
 
 {% block content %} <!-- Block content from base.html -->
 
@@ -12,22 +12,19 @@
   <h2>Latest Posts</h2>
   <hr />
   {% for blog in blogs.all %}
-  <h3>{{ blog.title }}</h3></a>
-  {{ pub_date_pretty}}
+  <h3>{{ blog.title }}</h3>
+    <h4> {{ blog.date_pub}} </h4>
+
   <br />
-  <img class="img-fluid" src="{{ blog.image.url }}" height=200 width=200 />
+  <img class="img-fluid" src="{{ blog.image.url }}" height=300 width=300 />
   <br />
-    <a href="{% url 'detail' blog.id %}"><h3> Read more </h3></a>
+     <a href="{% url 'detail' blog.id %}"> <button type="button" class="btn btn-primary">Article</button></a>
+
     <hr />
   {% endfor %}
   </div>
 </main>
 
-  <footer class="text-muted">
-    <div class="container text-center">
-      <p>© NIZZOLI Laurent {% now "Y" %}</p>
-      </div>
-  </footer>
 
 
 {% endblock %} <!-- End of block content from base.html -->

@@ -13,13 +13,12 @@ class Job(models.Model):
     def body(self):
         return self.summary[:0]
 
-class Formation(models.Model):
-    date_to_date = models.CharField(max_length=50)
-    title = models.CharField(max_length=200)
-    summary = models.CharField(max_length=800)
+class Formations(models.Model):
+    title = models.CharField(max_length=255)
+    center_formation = models.CharField(max_length=100)
+    date_to_date = models.CharField(max_length=20)
+    body = models.TextField(max_length=800)
 
     def __str__(self):
         return self.title
 
-    def body(self):
-        return self.summary[:0]

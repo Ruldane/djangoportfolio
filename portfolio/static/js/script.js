@@ -1,17 +1,5 @@
-$(function(){
+$(document).ready(
 
-    $(".navbar a, footer a").on("click", function(event){
-
-        event.preventDefault();
-        var hash = this.hash;
-
-        $('body,html').animate({scrollTop: $(hash).offset().top} , 900 , function(){window.location.hash = hash;})
-
-    });
-
-  $(window).resize(function() {
-	$('h1, h2, h3, h4 p').css('z-index', 'auto'); //auto reflow
-  });
-
-
-})
+function(){ $('.education-block').hide(); $('.read-more').click(function()
+{ $(this).siblings('.education-block').show(); $(this).hide(); $(this).parent().find('.read-less').show(); });
+$('.read-less').click(function(){ $(this).siblings('.education-block').hide(); $(this).hide(); $(this).parent().find('.read-more').show(); }); });

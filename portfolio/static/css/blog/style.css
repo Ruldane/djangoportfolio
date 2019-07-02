@@ -2,6 +2,18 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
-h3{
+h3, button {
   margin-top: 20px;
+}
+
+h3 {
+    color: #1E90FF;
+}
+
+h4 {
+
+}
+
+h5{
+    color: #888;
 }

@@ -1,17 +1,19 @@
 
 {% extends 'blog/base.html' %} <!-- use the layout of base.html -->
 
-{% block title %} Home {% endblock %} <!-- Block title -->
+{% block title %} Details job {% endblock %} <!-- Block title -->
 
 {% block content %} <!-- Block content from base.html -->
 
 <main role="main">
-    <div class="container">
+    <div class="container-fluid">
 
     <h1 class="text-center pt-3">{{ jobs.company }}</h1>
     <p class="text-center">{{ jobs.title }}</p>
         <p class="text-center">{{ jobs.date_to_date}}</p>
-    <img class="img-fluid" src="{{ jobs.image.url }}"  />
+    <div class="text-center">
+         <img src="{{ jobs.image.url }}"  />
+    </div>
     <br />
     <br />
     <p class="text-center">{{ jobs.summary }}</p>

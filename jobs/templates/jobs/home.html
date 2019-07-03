@@ -84,23 +84,25 @@ I work as an autodidact every night to acquire additional technical skills. Curr
 
 
   <section id="experience" >
-            <div class="container">
+            <div class="container" >
                 <div class="white-divider"></div>
                 <div class="heading">
                     <h2>Professionnal experiences</h2>
                 </div>
-                <div class="row">
+                <div class="row" >
           {% for job in jobs.all %}
           <div class="col-md-4">
             <div class="card mb-4 box-shadow">
                 <h4 class="card-text+top text-center">{{ job.company }}</h4>
                 <h5 class="card-text+top text-center">{{ job.title }}</h5>
                 <p class="card-text+top text-center">{{ job.date_to_date }}</p>
-              <img class="card-img-top" src="{{ job.image.url }}" />
+                <div class="text-center">
+                    <img class="img-fluid"  src="{{ job.image.url }}"  />
+                </div>
 
-              <div class="card-body text-center" >
-                 <a href="{% url 'detailjobs' job.id %}"> <button type="button" class="btn btn-primary">Read more</button></a>
 
+              <div class="card-body text-center"  >
+                 <a href="{% url 'detailjobs' job.id %}" target="_blank"> <button type="button" class="btn btn-primary">Read more</button></a>
               </div>
             </div>
           </div>
@@ -118,7 +120,7 @@ I work as an autodidact every night to acquire additional technical skills. Curr
                 <div class="row">
 
                      <div class="col-md-6">
-                         <div class="education-block">w
+                         <div class="education-block">
                              <h5>2018 - 2019</h5>
                             <span class="fas fa-graduation-cap"></span>
                             <h3>Aristée - La Garde</h3>
@@ -181,11 +183,11 @@ I work as an autodidact every night to acquire additional technical skills. Curr
                 <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
                     <ol class="carousel-indicators">
                          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                         <li data-target="#myCarousel" data-slide-to="1"></li>
-                         <li data-target="#myCarousel" data-slide-to="2"></li>
-                         <li data-target="#myCarousel" data-slide-to="3"></li>
-                         <li data-target="#myCarousel" data-slide-to="4"></li>
-                         <li data-target="#myCarousel" data-slide-to="5"></li>
+                         <li data-target="#myCarousel" data-slide-to="1"class="active"></li>
+                         <li data-target="#myCarousel" data-slide-to="2"class="active"></li>
+                         <li data-target="#myCarousel" data-slide-to="3" class="active"></li>
+                         <li data-target="#myCarousel" data-slide-to="4" class="active"></li>
+                         <li data-target="#myCarousel" data-slide-to="5" class="active"></li>
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
@@ -217,7 +219,7 @@ I work as an autodidact every night to acquire additional technical skills. Curr
                     <a class="carousel-control-prev" href="#myCarousel" data-slide="prev" role="button">
                         <span class="fas fa-chevron-left fa-2x"></span>
                     </a>
-                    <a class="carousel-control-next" href="#myCarousel" data-slide="next" role="button">
+                    <a class="carousel-control-next" href="#myCarousel" data-slide="next" role="button" >
                         <span class="fas fa-chevron-right fa-2x"></span>
                     </a>
                 </div>

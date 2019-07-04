@@ -6,6 +6,7 @@
 {% block content %} <!-- Block content from base.html -->
 
 <main role="main">
+    <section class="detailsjob">
     <div class="container-fluid">
 
     <h1 class="text-center pt-3">{{ jobs.company }}</h1>
@@ -16,9 +17,11 @@
     </div>
     <br />
     <br />
-    <p class="text-center">{{ jobs.summary }}</p>
-  </div>
-
+        <div class="container">
+    <p>{{ jobs.summary | safe }}</p>
+        </div>
+    </div>
+</section>
   </main>
 
 {% endblock %} <!-- End of block content from base.html -->3

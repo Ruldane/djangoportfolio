@@ -1,3 +1,5 @@
+#more {display: none;}
+
 .show-more span {
   display: inline-block;
   height: 0;
@@ -37,7 +39,7 @@ section .heading h2{
 .red-divider{
     width: 100px;
     height: 2px;
-    background: #1E90FF;
+    background: #1eb0ff;
     margin: 0 auto 20px;
 
 }
@@ -51,7 +53,7 @@ section .heading h2{
 
 /* MENU */
 .navbar {
-    background-color: #1E90FF;
+    background-color: #1eb0ff;
     font-size: 12px;
     border-bottom: 1px solid #fff;
     letter-spacing: 4px;
@@ -63,7 +65,7 @@ section .heading h2{
     text-align: center;
 }
 .nav-pills .nav-link.active,  .nav-pills .nav-link:hover{
-    color: #1E90FF !important;
+    color: #1eb0ff !important;
     background-color: #fff !important;
 }
 .navbar-toggler{
@@ -76,7 +78,7 @@ section .heading h2{
 .presentation {
    width: 1000px;
 font-size: 20px;
-    background: #1E90FF;
+    background: #1eb0ff;
     margin: 0 auto 20px;
     color: #fff;
 }
@@ -84,7 +86,7 @@ font-size: 20px;
 /* ABOUT */
 #about{
     padding-top: 50px;
-    background: #1E90FF;
+    background: #1eb0ff;
 }
 
 .profile-picture{
@@ -114,7 +116,7 @@ font-size: 20px;
 }
 .button1:hover{
     background: white;
-    color: #1E90FF;
+    color: #1eb0ff;
     text-decoration: none;
 }
 
@@ -125,7 +127,7 @@ font-size: 20px;
 
 
 #skills h2 {
-    color: #1E90FF;
+    color: #1eb0ff;
 }
 
 #skills .progress{
@@ -134,7 +136,7 @@ font-size: 20px;
     background: #ddd;
 }
 #skills .progress-bar{
-    background: #1E90FF;
+    background: #1eb0ff;
 }
 #skills .progress h5{
     margin-top: 5px;
@@ -144,11 +146,11 @@ font-size: 20px;
 
 /* EXPERIENCE */
 #experience{
-    background: #1E90FF;
+    background: #1eb0ff;
     font-family: 'Lato', sans-serif;
 }
 #experience p{
-    color: #1E90FF;
+    color: #1eb0ff;
 }
 #experience .heading h2{
     color: #fff;
@@ -179,7 +181,7 @@ font-size: 20px;
     display: table;
 }
 .timeline li .timeline-badge{
-    color: #1E90FF;
+    color: #1eb0ff;
     width: 50px;
     line-height: 50px;
     font-size: 20px;
@@ -236,7 +238,7 @@ font-size: 20px;
     font-size: 20px;
 }
 .timeline-heading h4{
-     color: #1E90FF;
+     color: #1eb0ff;
 }
 
 
@@ -245,7 +247,7 @@ font-size: 20px;
     background: #fff;
 }
 #education .heading h2{
-    color: #1E90FF
+    color: #1eb0ff;
 }
 .education-block{
     width:90%;
@@ -265,7 +267,7 @@ font-size: 20px;
 }
 
 .education-block h3{
-     color: #1E90FF;
+     color: #1eb0ff;
 }
 .education-block h4{
    margin-bottom: 20px;
@@ -280,7 +282,7 @@ font-size: 20px;
 
 /* PORTFOLIO */
 #portfolio{
-    background: #1E90FF;
+    background: #1eb0ff;
 }
 #portfolio .heading h2{
     color: #fff;
@@ -302,7 +304,7 @@ font-size: 20px;
 
 /* RECOMMANDATIONS */
 #recommandations{
-    background: #1E90FF;
+    background: #1eb0ff;
 }
 #recommandations .heading h2{
     color: #fff;
@@ -318,7 +320,7 @@ font-size: 20px;
     border: 1px solid #fff;
 }
 .carousel-indicators li.active{
-    background-color: #1E90FF;
+    background-color: #fff;
 }
 #myCarousel .carousel-item{
     padding: 40px 30px;
@@ -330,7 +332,7 @@ font-size: 20px;
 
 .fas.fa-chevron-left, .fas.fa-chevron-right{
     background-image: none;
-    color: #1E90FF;
+    color: #fff;
 }
 
 

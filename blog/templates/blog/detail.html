@@ -5,17 +5,18 @@
 {% block content %} <!-- Block content from base.html -->
 
 <main role="main">
+    <section class="detailsjob">
     <div class="container">
-
     <h1 class="text-center pt-3">{{ blog.title }}</h1>
     <p class="text-center">{{ blog.pub_date }}</p>
     <img class="img-fluid" src="{{ blog.image.url }}"  />
     <br />
     <br />
-    <p>{{ blog.body }}</p>
+    <p>{{ blog.body | safe }}</p>
   </div>
-
+    </section>
   </main>
+
 
 
 {% endblock %} <!-- End of block content from base.html -->

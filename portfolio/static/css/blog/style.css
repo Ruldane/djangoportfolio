@@ -2,7 +2,7 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
-h3, button {
+h3, button{
   margin-top: 20px;
 }
 
@@ -16,4 +16,8 @@ h4 {
 
 h5{
     color: #888;
+}
+
+body{
+    background: #d2d6d8;
 }

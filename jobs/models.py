@@ -1,11 +1,12 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 class Job(models.Model):
     image = models.ImageField(upload_to='images/')
     title = models.CharField(max_length=200, default='SOME STRING')
     company = models.CharField(max_length=50, default='SOME STRING')
     date_to_date = models.CharField(max_length=50, default='SOME STRING')
-    summary = models.TextField(max_length=800, default='SOME STRING')
+    summary = RichTextField(max_length=800, default='SOME STRING')
 
     def __str__(self):
         return self.title

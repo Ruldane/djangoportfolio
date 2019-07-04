@@ -11,7 +11,7 @@
 
         <div class="heading">
                 <h1>NIZZOLI Laurent</h1>
-                <p class="presentation col-8 ">  Looking for a company in Strasbourg to do the bachelor's degree "Analyst in Computer and Network Engineering - cybersecurity specialist".
+                <p class="presentation col-8 text-justify ">  Looking for a company in Strasbourg to do the bachelor's degree "Analyst in Computer and Network Engineering - cybersecurity specialist".
 I am a software developer that has always been fascinated with computers.  After learning CSS and HTML, I got involved in a mini-application in PHP PDO as a project during my internship.  I integrated it in my internship structure during which I learned to code in the Java language.
 I work as an autodidact every night to acquire additional technical skills. Currently I'm learning Python and its Django Framework</p>
             <a href="{% static 'CV_NIZZOLI_Laurent.pdf' %}" class="button1" target="_blank">Download CV</a>
@@ -30,7 +30,7 @@ I work as an autodidact every night to acquire additional technical skills. Curr
                 <div class="row">
 
                     <div class="col-lg-6">
-                        <h2> Web : </h2>
+                        <h3> Web : </h3>
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
                                 <h5>DJANGO 60%</h5>
@@ -61,7 +61,7 @@ I work as an autodidact every night to acquire additional technical skills. Curr
 
                     </div>
                     <div class="col-md-6">
-                        <h2> Programming : </h2>
+                        <h3> Programming : </h3>
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
                                 <h5>PYTHON 50%</h5>
@@ -96,9 +96,10 @@ I work as an autodidact every night to acquire additional technical skills. Curr
                 <h4 class="card-text+top text-center">{{ job.company }}</h4>
                 <h5 class="card-text+top text-center">{{ job.title }}</h5>
                 <p class="card-text+top text-center">{{ job.date_to_date }}</p>
-                <div class="text-center">
-                    <img class="img-fluid"  src="{{ job.image.url }}"  />
-                </div>
+                <div class="container-fluid"><div class="enter-block">
+                  <img  src="{{ job.image.url }}"  class="img-fluid">
+                 </div>
+    </div>
 
 
               <div class="card-body text-center"  >

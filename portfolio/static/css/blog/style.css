@@ -2,22 +2,26 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
-h3, button{
-  margin-top: 20px;
-}
-
-h3, h1 {
-    color: #1E90FF;
-}
-
-h4 {
-
-}
-
-h5{
-    color: #888;
+/* ABOUT */
+#about{
+    padding: 50px;
+    background: #E6ECF0;
 }
 
 body{
     background: #d2d6d8;
 }
+
+
+ h1, h5 {
+    color: #888;
+}
+
+/* FOOTER */
+footer{
+    background: #333;
+    padding: 20px 0 40px;
+}
+
+
+

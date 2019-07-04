@@ -4,10 +4,15 @@
 
 {% block content %} <!-- Block content from base.html -->
 
-<main role="main">
 
-  <div class="container">
-  <h1 class="text-center pt-3">Welcome to Laurent's Blog</h1>
+<section id="about" class="container-fluid">
+        <div class="heading">
+                <h1 class="text-center pt-3">Laurent's Blog</h1>
+                <h4 class="text-center pt-3">Here my first blog about programming, several articles will be added as soon as. </h4>
+        </div>
+</section>
+
+<section id="body" class="container">
   <br />
   <br />
   <h2>Latest Posts</h2>
@@ -23,9 +28,9 @@
 
     <hr />
   {% endfor %}
-  </div>
 
-</main>
+  </section>
+
 
 
 

@@ -11,6 +11,3 @@ def detailjobs(request, jobs_id):
     detailjobs = get_object_or_404(Job, pk=jobs_id)
     return render(request, 'jobs/detailjobs.html', {'jobs':detailjobs})
 
-def detailformations(request, formations_id):
-    detailformations = get_object_or_404(Formations, pk=formations_id)
-    return render(request, 'jobs/detailformations.html', {'formations':detailformations})

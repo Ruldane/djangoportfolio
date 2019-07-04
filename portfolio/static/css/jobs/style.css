@@ -83,6 +83,12 @@ font-size: 20px;
     color: #fff;
 }
 
+
+#detailsjob{
+    padding-top: 50px;
+    background: #d2d6d8;
+}
+
 /* ABOUT */
 #about{
     padding-top: 50px;

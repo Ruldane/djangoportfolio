@@ -1,12 +1,12 @@
 
-{% extends 'blog/base.html' %} <!-- use the layout of base.html -->
+{% extends 'jobs/base.html' %} <!-- use the layout of base.html -->
 
 {% block title %} Details job {% endblock %} <!-- Block title -->
 
 {% block content %} <!-- Block content from base.html -->
 
 <main role="main">
-    <section class="detailsjob">
+    <section id="detailsjob">
     <div class="container-fluid">
 
     <h1 class="text-center pt-3">{{ jobs.company }}</h1>
@@ -17,12 +17,20 @@
     </div>
     <br />
     <br />
-        <div class="container">
+        <div class="container text-justify">
     <p>{{ jobs.summary | safe }}</p>
         </div>
+        <div class="text-center">
+            <a href="{% url 'home' %}">Home page </a>
+        </div>
+
     </div>
 </section>
   </main>
 
+
 {% endblock %} <!-- End of block content from base.html -->3
 
+{% block footer %}
+<
+{% endblock %} <!-- End of block content from base.html -->

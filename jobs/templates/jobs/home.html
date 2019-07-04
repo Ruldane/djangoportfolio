@@ -11,7 +11,7 @@
 
         <div class="heading">
                 <h1>NIZZOLI Laurent</h1>
-                <p class="presentation col-8 text-justify ">  Looking for a company in Strasbourg to do the bachelor's degree "Analyst in Computer and Network Engineering - cybersecurity specialist".
+                <p class="presentation col-8 text-justify">  Looking for a company in Strasbourg to do the bachelor's degree "Analyst in Computer and Network Engineering - cybersecurity specialist".
 I am a software developer that has always been fascinated with computers.  After learning CSS and HTML, I got involved in a mini-application in PHP PDO as a project during my internship.  I integrated it in my internship structure during which I learned to code in the Java language.
 I work as an autodidact every night to acquire additional technical skills. Currently I'm learning Python and its Django Framework</p>
             <a href="{% static 'CV_NIZZOLI_Laurent.pdf' %}" class="button1" target="_blank">Download CV</a>
@@ -112,67 +112,34 @@ I work as an autodidact every night to acquire additional technical skills. Curr
             </div>
   </section>
 
- <section id="education">
+  <section id="education">
             <div class="container">
                  <div class="red-divider"></div>
                 <div class="heading">
                     <h2>Formations</h2>
                 </div>
                 <div class="row">
-
+          {% for formation in formations.all %}
                      <div class="col-md-6">
                          <div class="education-block">
-                             <h5>2018 - 2019</h5>
+                             <h5>{{ formation.date_to_date }}</h5>
                             <span class="fas fa-graduation-cap"></span>
-                            <h3>Aristée - La Garde</h3>
-                            <h4>Software developer </h4>
+                            <h3>{{ formation.center_formation }} </h3>
+                            <h4> {{ formation.title}} </h4>
                             <div class="red-divider"></div>
-                             <p class="show-more"> <span>  Using HTML & CSS <br>Procedural development & using forms with database with PHP <br> Basics programming OOP with Python <br> Using Virtual Box <br> Development of an OOP application with PHP </span> </p>
+                             <p class="show-more"> <span> {{ formation.body | safe }} </span> </p>
                             <button class="read-more btn btn-info" >Read More</button>
                          </div>
                     </div>
+                    {% endfor %}
 
-                    <div class="col-md-6">
-                        <div class="education-block">
-                            <h5>2019</h5>
-                            <span class="fas fa-graduation-cap"></span>
-                            <h3>Platform Udemy</h3>
-                            <h4>Several formations</h4>
-                            <div class="red-divider"></div>
-                            <p class="show-more"> <span> Python programming oriented object, Django, Pandas <br> Bootsrap, PHP PDO, <br>Java programming oriented object, Testing application <br> Framework Spring & Groovy </span></p>
-                             <button class="read-more btn btn-info">Read More</button>
 
-                        </div>
-                    </div>
 
-                        <div class="col-md-6">
-                         <div class="education-block">
-                            <h5>2011</h5>
-                            <span class="fas fa-graduation-cap"></span>
-                            <h3>Défi83 - Toulon </h3>
-                            <h4>Payroll accountant</h4>
-                            <div class="red-divider"></div>
-                             <p class="show-more"> <span> Formation center <br> earning the paid for company </span> </p>
-                             <button class="read-more btn btn-info">Read More</button>
 
-                        </div>
-                    </div>
-                     <div class="col-md-6">
-                        <div class="education-block">
-                            <h5>2008 - 2011</h5>
-                            <span class="fas fa-graduation-cap"></span>
-                            <h3>Hermès- Toulon </h3>
-                            <h4>Higher TCM Assistant of SMEs</h4>
-                            <div class="red-divider"></div>
-                            <p class="show-more"> <span> Higher Technician Certificate Management Assistant of SMEs <br> Gestion of small companies (Administrative in majority) </span> </p>
-                            <button class="read-more btn btn-info">Read More</button>
-
-                        </div>
-                    </div>
                 </div>
             </div>
 
-        </section>
+</section>
 
         <hr>
        <section id="recommandations">
@@ -226,10 +193,11 @@ I work as an autodidact every night to acquire additional technical skills. Curr
                 </div>
             </div>
         </section>
+
 {% endblock %}
 {% block footer %}
+
             <a href="#about">
                 <span class="fas fa-chevron-up"></span>
             </a>
-
 {% endblock %} <!-- End of block content from base.html -->

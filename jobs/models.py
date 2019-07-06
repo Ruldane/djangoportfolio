@@ -9,7 +9,7 @@ class Job(models.Model):
     summary = RichTextField(default='SOME STRING')
 
     def __str__(self):
-        return self.title
+        return self.company
 
     def body(self):
         return self.summary[:0]
@@ -22,4 +22,15 @@ class Formations(models.Model):
 
     def __str__(self):
         return self.title
+
+class skills(models.Model):
+    name_skills = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='images/')
+    body = RichTextField()
+
+    def __str__(self):
+        return self.name_skills
+
+
+
 

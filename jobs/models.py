@@ -26,7 +26,10 @@ class Formations(models.Model):
 class skills(models.Model):
     name_skills = models.CharField(max_length=255)
     image = models.ImageField(upload_to='images/')
-    body = models.TextField(max_length=800, default='SOME STRING')
+    summary = models.TextField()
+
+    def body(self):
+        return self.summary[:0]
 
     def __str__(self):
         return self.name_skills

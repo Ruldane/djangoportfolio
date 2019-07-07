@@ -21,3 +21,4 @@ class Blog(models.Model):
 
 
 
+gi

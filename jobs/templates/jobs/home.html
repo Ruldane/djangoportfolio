@@ -24,25 +24,26 @@
 
 <section id="skills">
 
-                <div class="container">
+
+     <div class="container">
+      <div class="red-divider"></div>
+     <div class="heading">
+           <h2>Compétences</h2>
+     </div>
+     <div class="row">
+{% for skill in skillsinformatic.all %}
+          <div class="col-md-4">
+              <div class="education-block">
+                   <h4> {{ skill.name_skills }} </h4>
+                 <span class="fas fa-graduation-cap"></span>
                  <div class="red-divider"></div>
-                <div class="heading">
-                      <h2>Compétences</h2>
-                </div>
-                <div class="row">
-           {% for skill in skillsinformatic.all %}
-                     <div class="col-md-6">
-                         <div class="education-block">
-                              <h4> {{ skill.name_skills }} </h4>
-                            <span class="fas fa-graduation-cap"></span>
-
-                            <div class="red-divider"></div>
-                             <p class="show-more text-justify"> <span> {{ skill.body  }} </span> </p>
-                                  <img  src="{{ skill.image.url }}"  class="read-more">
-                         </div>
-                    </div>
-
-            {% endfor %}
+                  <p class="show-more text-justify"> <span> {{ skill.body  }} </span> </p>
+                       <img  src="{{ skill.image.url }}"  class="read-more">
+              </div>
+         </div>
+{% endfor %}
+     </div>
+     </div>
 </section>
 
 

@@ -9,14 +9,14 @@
         <div class="heading">
                 <h1 class="text-center pt-3"> Mon blog </h1>
                 <h4 class="text-center pt-3"> Ici est mon premier blog codé en Django. J'ajouterai des articles au fur et à mesure. </h4>
-                <h5 class="text-center pt-3"> Les articles ajoutés concerneront la programmation mais en rapport avec des projets sur lesquels j'ai eu à travailler.</h5>
+                <h5 class="text-center pt-3"> Les articles ajoutés concerneront la programmation en rapport avec des projets sur lesquels j'ai eu à travailler.</h5>
         </div>
 </section>
 
 <section id="body" class="container">
   <br />
   <br />
-  <h2>Dernier articles </h2>
+  <h2>Derniers articles </h2>
   <hr />
   {% for blog in blogs.all %}
   <h3>{{ blog.title }}</h3>

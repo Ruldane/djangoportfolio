@@ -37,7 +37,7 @@
                    <h4> {{ skill.name_skills }} </h4>
                  <span class="fas fa-graduation-cap"></span>
                  <div class="red-divider"></div>
-                  <p class="show-more text-justify"> <span> {{ skill.body  }} </span> </p>
+                  <p class="show-more text-justify"> <span> {{ skill.body   }} </span> </p>
                        <img  src="{{ skill.image.url }}"  class="read-more">
               </div>
          </div>
@@ -55,22 +55,18 @@
                 </div>
                 <div class="row" >
           {% for job in jobs.all %}
-          <div class="col-md-4">
-            <div class="card mb-4 box-shadow">
-                <h4 class="card-text+top text-center">{{ job.company }}</h4>
+
+                            <div class="col-md-4">
+              <div class="education-block">
+                     <h4 class="card-text+top text-center">{{ job.company }}</h4>
                 <h5 class="card-text+top text-center">{{ job.title }}</h5>
                 <p class="card-text+top text-center">{{ job.date_to_date }}</p>
-                <div class="container-fluid"><div class="enter-block">
-                  <img  src="{{ job.image.url }}"  class="img-fluid">
-                 </div>
-                </div>
-
-
-              <div class="card-body text-center"  >
-                 <a href="{% url 'detailjobs' job.id %}" target="_blank"> <button type="button" class="btn btn-primary">Read more</button></a>
+                 <span class="fas fa-graduation-cap"></span>
+                 <div class="red-divider"></div>
+                   <img  src="{{ job.image.url }}"  class="img-fluid">
+                    <a href="{% url 'detailjobs' job.id %}" target="_blank"> <button type="button" class="btn btn-primary">Read more</button></a>
               </div>
-            </div>
-          </div>
+         </div>
           {% endfor %}
                 </div>
             </div>

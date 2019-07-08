@@ -1,0 +1,27 @@
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+/* ABOUT */
+#about{
+    padding: 50px;
+    background: #E6ECF0;
+}
+
+body{
+    background: #d2d6d8;
+}
+
+
+ h1, h5 {
+    color: #888;
+}
+
+/* FOOTER */
+footer{
+    background: #333;
+    padding: 20px 0 40px;
+}
+
+
+

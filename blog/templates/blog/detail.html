@@ -6,19 +6,28 @@
 
 <main role="main">
     <section id="detailsblog">
+    <div class="heading container">
     <div class="container">
     <h1 class="text-center pt-3">{{ blog.title }}</h1>
-        <h3 class="text-center"> Ajouté le {{ blog.date_pub }}</h3>
+        <h2 class="text-center"> Ajouté le {{ blog.date_pub }}</h2>
+        </div>
+        </div>
     <br />
 
-    <img class="img-fluid" src="{{ blog.image.url }}"  />
+        <div class="container-fluid body">
+
+            <div class="container body">
+    <img class="img-fluid imgbody" src="{{ blog.image.url }}"  />
+
     <br />
     <br />
     <p>{{ blog.body | safe }}</p>
-  </div>
+                 </div>
+
         <div class="text-center">
             <a href="{% url 'allblogs' %}"> Page précédente </a>
         </div>
+            </div>
     </section>
   </main>
 

@@ -5,17 +5,80 @@ body{
 /* ABOUT */
 #about{
     padding: 50px;
-    background: #E6ECF0;
-}
+    background: #6497B1;
 
-body{
-    background: #d2d6d8;
 }
 
 
- h1, h5 {
-    color: #888;
+#about{
+    padding-top: 50px;
+    background: #6497B1;
 }
+
+.profile-picture{
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+
+}
+#about .heading h1{
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 20px;
+
+}
+
+
+#about .heading   h5 {
+
+  color: #fff;
+
+}
+
+#body .body h2{
+    color: #6497B1;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+
+
+ #detailsblog .heading h1, h2{
+
+    color: white;
+}
+
+
+ #detailsblog .heading .articles  h2{
+
+    #6497B1;
+}
+
+
+ #detailsblog .body {
+
+    background: white;
+    padding: 10px;
+
+}
+
+
+ #detailsblog {
+ background: #6497B1;
+
+
+}
+
+body h1, h3, h2 h5{
+
+color = #6497B1;
+
+
+
+}
+
+
+
 
 /* FOOTER */
 footer{

@@ -181,6 +181,11 @@ font-size: 20px;
     background: #6497B1;
     font-family: 'Lato', sans-serif;
 }
+
+#experience .imgexperiences {
+    margin-bottom:20px;
+}
+
 #experience p{
     color: #6497B1;
 }
